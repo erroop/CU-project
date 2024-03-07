@@ -20,6 +20,15 @@ $(function(){
         
     })
 
+    //Header nav menu ======================================
+    const NavigationItem = $(".NavigationItem");
+    NavigationItem.mouseover(function(){
+        NavigationItem.find(".NavigationItem-list").css({display : "none"})
+        $(this).find(".NavigationItem-list").css({display : "block"})
+    })
+    NavigationItem.find(".NavigationItem-list").mouseleave(function(){
+        NavigationItem.find(".NavigationItem-list").css({display : "none"})
+    })
 
     // EventSlide setInterval slide =============================
     let slide_index = 2;
