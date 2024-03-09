@@ -326,3 +326,211 @@
      color: #1e1e1e;
     background-color: #f8f5e1;
 }
+
+/* BlandSlide =======================*/
+.BlandSlide{
+    position: relative;
+}
+
+.BlandSlideWrapList{
+    display: flex;
+    width: 100%;
+    overflow-x: hidden;
+}
+
+.BlandSlideWrapItem{
+    display: none;
+    width: 100%;
+    flex-shrink: 0;
+    transition: all 0.5s;
+}
+
+.BlandSlideWrapItem img{
+    width: 100%;
+}
+
+
+.BlandSlideinnerImg{
+    position: absolute;
+    top:50%;
+    left:25%;
+    transform: translateY(-50%);
+}
+
+.BlandSlideinnerTitle{
+    position: absolute;
+    top:50%;
+    right:25%;
+    transform: translateY(-50%);
+    padding:2rem 2rem 4rem 1rem;
+    color: #fff;
+    box-sizing: border-box;
+    background: url(../img/bg_02.png) no-repeat;
+}
+
+.BlandSlideinnerTitle strong{
+    font-size: 1.2rem;
+    line-height: 1.5rem;
+}
+
+.BlandSlideinnerTitle p{
+    margin-top: 1rem;
+    font-size: 0.8rem;
+    line-height: 1.2rem;
+}
+
+.BlandSlideIndicator{
+   position: absolute;
+   top:5%;
+   right: 25%;
+}
+
+.BlandSlideIndicator span{
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    border-radius: 100%;
+    background-color: #e4e4e5;
+    margin: 0px 4px;
+    cursor: pointer;
+}
+
+.BlandSlideIndicator .focus{
+    opacity: 1;
+    background-color: #8c32aa;
+}
+
+/* SpecialCu =========================*/
+.SpecialCu{
+    width: 50%;
+    margin: auto;
+    margin-top: 5rem;
+    margin-bottom: 3rem;
+}
+
+.SpecialCu-title{
+    margin-top: 1.5rem;
+}
+
+.SpecialCu-title h3{
+    margin-bottom: 1rem;
+    font-size: 1.1rem;
+    font-weight: 700;
+}
+
+.SpecialCu-title p{
+    margin-bottom: 1rem;
+    font-size: 0.8rem;
+    line-height: 1.2rem;
+    color: #323232;
+}
+
+/* LifeCu*/
+.LifeCu{
+    width: 50%;
+    margin: auto;
+    margin-top: 5rem;
+    margin-bottom: 7rem;
+}
+
+.LifeCu-title{
+    margin-top: 1.5rem;
+}
+
+.LifeCu-title h3{
+    margin-bottom: 1rem;
+    font-size: 1.1rem;
+    font-weight: 700;
+}
+
+.LifeCu-title p{
+    margin-bottom: 1rem;
+    font-size: 0.8rem;
+    line-height: 1.2rem;
+    color: #323232;
+}
+
+.LifeCuWrap{
+    margin-top: 5rem;
+}
+
+.LifeCuWrapList{
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 6rem;
+}
+
+.LifeCuWrapList::after{
+    position: absolute;
+    bottom:0%;
+    left:50%;
+    transform: translateX(-50%);
+    width: 100%;
+    height: 100%;
+    background: url(../img/refresh_bg07.jpg) no-repeat bottom;
+    content: "";
+    z-index: -1;
+}
+
+.LifeCuWrapItem{
+   text-align: center;
+}
+
+.LifeCuWrapItem:nth-child(2){
+    position: relative;
+    padding:0rem 3.7rem
+}
+
+.LifeCuWrapItem:nth-child(2)::after{
+    position: absolute;
+    top:0%;
+    right: 0%;
+    width: 100%;
+    height: 100%;
+    background: url(../img/bg_05.png) no-repeat right;
+    background-size: 5px 300px;
+    content: "";
+}
+
+.LifeCuWrapItem:nth-child(2)::before{
+    position: absolute;
+    top:0%;
+    left: 0%;
+    width: 100%;
+    height: 100%;
+    background: url(../img/bg_05.png) no-repeat left;
+    background-size: 5px 300px;
+    content: "";
+}
+
+.LifeCuWrapItem p{
+    margin-top: 1.5rem;
+    font-size: 0.8rem;
+    line-height: 1.2rem;
+    color: #323232;
+}
+
+.LifeCuWrapItem h3{
+    margin-top: 0.5rem;
+    font-size: 1.2rem;
+    font-weight: 700;
+}
+
+.LifeCuText{
+    margin-top: 2.5rem;
+    text-align: center;
+}
+
+.LifeCuText-sub{
+    font-size: 0.8rem;
+    line-height: 1.2rem;
+    color: #323232;
+}
+
+.LifeCuText-main{
+    margin-top: 1rem;
+    font-size: 1rem;
+    font-weight: 700;
+    color: #8c32aa;
+}
