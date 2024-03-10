@@ -1695,6 +1695,9 @@ Footer{
         display: none;
     }
 
+    .HeaderLang{
+        right: 7%;
+    }
 
     .TogglemenuLink{
         width: 20px;
@@ -2007,10 +2010,6 @@ Footer{
         width: 65px;
         background: url(../img/ico_cu.png) no-repeat center bottom/ cover;
         background-size: 100%;
-    }
-
-    .innertext-link a{
-        height: 100%;
     }
 
     .MainInfoWrapItem:first-child::after{

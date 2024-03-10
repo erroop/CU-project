@@ -1,9 +1,5 @@
 $(function(){
-    // window resize
-    $(window).resize(function(){
-        location.reload();
-    })
-
+    $("body").css({overflowX : "hidden"});
 
     // Header menu fixed =======================================
     const HeaderWrap = $(".HeaderWrap");
