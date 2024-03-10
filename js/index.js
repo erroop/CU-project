@@ -574,7 +574,7 @@ $(function(){
 
     // 모바일버전 hotissue html 변경
     if($(window).width() <= 785){
-        $("html").css({overflowX : "hidden"});
+        $("body").css({overflowX : "hidden"});
         EventSlideWrap.css({transition: "none"})
         EventSlideWrap.css({transform : "translateX(" + -(EventSlideWrap.width())*1 + "px)"});
 

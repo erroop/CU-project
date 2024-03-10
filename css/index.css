@@ -1670,6 +1670,10 @@ Footer{
         font-size: 12px;
     }
 
+    body{
+        overflow-x: hidden;
+    }
+
     .HeaderWrap{
         min-height: 5rem;
     }
