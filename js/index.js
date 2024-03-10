@@ -1,21 +1,48 @@
 $(function(){
+    // window resize
+    $(window).resize(function(){
+        location.reload();
+    })
+
+
     // Header menu fixed =======================================
     const HeaderWrap = $(".HeaderWrap");
     $(window).scroll(function(){
-        if(window.scrollY > 200){
-            HeaderWrap.css({position : "fixed", width: "100%",  zIndex : "99999999"});
-            HeaderWrap.find(".Logo").css({left : "2.5%"});
-            HeaderWrap.find(".Togglemenu").css({right : "2.5%"});
-            HeaderWrap.find(".HeaderLang").css({right : "5.5%"});
-            HeaderWrap.find(".HeaderTopUtil").css({right : "2.5%"});
-
+        if(window.innerWidth > 1280){
+            if(window.scrollY > 200){
+                HeaderWrap.css({position : "fixed", width: "100%",  zIndex : "99999999"});
+                HeaderWrap.find(".Logo").css({left : "2.5%"});
+                HeaderWrap.find(".Togglemenu").css({right : "2.5%"});
+                HeaderWrap.find(".HeaderLang").css({right : "5.5%"});
+                HeaderWrap.find(".HeaderTopUtil").css({right : "2.5%"});
+    
+            }
+            else if(window.scrollY < 200){
+                HeaderWrap.css({position : "relative", width: "95%"});
+                HeaderWrap.find(".Logo").css({left : "0%"});
+                HeaderWrap.find(".Togglemenu").css({right : "0%"});
+                HeaderWrap.find(".HeaderLang").css({right : "3%"});
+                HeaderWrap.find(".HeaderTopUtil").css({right : "0%"});
+            }
         }
-        else if(window.scrollY < 200){
-            HeaderWrap.css({position : "relative", width: "95%"});
-            HeaderWrap.find(".Logo").css({left : "0%"});
-            HeaderWrap.find(".Togglemenu").css({right : "0%"});
-            HeaderWrap.find(".HeaderLang").css({right : "3%"});
-            HeaderWrap.find(".HeaderTopUtil").css({right : "0%"});
+
+        if(window.innerWidth < 1280 && window.innerWidth > 785){
+            if(window.scrollY > 200){
+                HeaderWrap.css({position : "fixed", width: "100%",  zIndex : "99999999"});
+                HeaderWrap.find(".Logo").css({left : "2.5%"});
+                HeaderWrap.find(".Togglemenu").css({right : "2.5%"});
+                HeaderWrap.find(".HeaderLang").css({right : "8%"});
+                HeaderWrap.find(".HeaderTopUtil").css({right : "2.5%"});
+    
+            }
+            else if(window.scrollY < 200){
+                HeaderWrap.css({position : "relative", width: "95%"});
+                HeaderWrap.find(".Logo").css({left : "0%"});
+                HeaderWrap.find(".Togglemenu").css({right : "0%"});
+                HeaderWrap.find(".HeaderLang").css({right : "6%"});
+                HeaderWrap.find(".HeaderTopUtil").css({right : "0%"});
+            }
+            console.log("ok")
         }
         
     })
@@ -398,6 +425,101 @@ $(function(){
         }
     })
 
+    if(window.innerWidth < 1280){
+        let PlusContent_count = 0;
+        let Plus_loop_index = 1;
+
+        const PlusContent_slide_loop = () => {
+            if(Plus_loop_index === 0){
+                PlusContent_slide(0, 0);
+                Plus_loop_index++;
+            }
+            else if(Plus_loop_index === 1){
+                PlusContent_slide(1, 1);
+                Plus_loop_index++;
+            }
+            else if(Plus_loop_index === 2){
+                PlusContent_slide(2, 2);
+                Plus_loop_index++;
+            }
+            else if(Plus_loop_index === 3){
+                PlusContent_slide(3, 3);
+                Plus_loop_index++;
+            }
+            else if(Plus_loop_index === 4){
+                PlusContent_slide(4, 4);
+                Plus_loop_index = 0;
+            }
+        }
+
+        
+        const Plus_loop_interval = setInterval(PlusContent_slide_loop, 4000);
+
+        PlusContentIndicator.find(".Plustright").click(function(){
+            clearInterval(Plus_loop_interval);
+            if(PlusContent_count === 0){
+                PlusContent_slide(1, 1)
+                PlusContent_count++;
+            }
+            else if(PlusContent_count === 1){
+                PlusContent_slide(2, 2)
+                PlusContent_count++;
+            }
+            else if(PlusContent_count === 2){
+                PlusContent_slide(3, 3)
+                PlusContent_count++;
+            }
+            else if(PlusContent_count === 3){
+                PlusContent_slide(4 , 4)
+                PlusContent_count++;
+            }
+        })
+
+        PlusContentIndicator.find(".Plustleft").click(function(){
+            clearInterval(Plus_loop_interval);
+            if(PlusContent_count === 4){
+                PlusContent_slide(3, 3)
+                PlusContent_count--;
+            }
+            else if(PlusContent_count === 3){
+                PlusContent_slide(2, 2)
+                PlusContent_count--;
+            }
+            else if(PlusContent_count === 2){
+                PlusContent_slide(1, 1)
+                PlusContent_count--;
+            }
+            else if(PlusContent_count === 1){
+                PlusContent_slide(0, 0)
+                PlusContent_count--;
+            }
+        })
+
+        PlusContentIndicator.find("span").click(function(){
+            clearInterval(Plus_loop_interval);
+            if($(this).hasClass("index0")){
+                PlusContent_slide(0, 0);
+                PlusContent_count = 0;
+            }
+            else if($(this).hasClass("index1")){
+                PlusContent_slide(1, 1);
+                PlusContent_count = 1;
+            }
+            else if($(this).hasClass("index2")){
+                PlusContent_slide(2, 2);
+                PlusContent_count = 2;
+            }
+            else if($(this).hasClass("index3")){
+                PlusContent_slide(3, 3);
+                PlusContent_count = 3;
+            }
+            else if($(this).hasClass("index4")){
+                PlusContent_slide(4, 4);
+                PlusContent_count = 4;
+            }
+        })
+    }
+
     //CustoryIndicator create ==========================
     const CustoryFlex = $(".CustoryFlex");
     const CustoryIndicator = $(".CustoryIndicator");
@@ -454,5 +576,118 @@ $(function(){
         }
     }
 
-    const custory_slide_interval =  setInterval(custory_slide, 5000)
+    const custory_slide_interval =  setInterval(custory_slide, 5000);
+
+    // 모바일버전 hotissue html 변경
+    if(window.innerWidth <= 785){
+        $("body").css({overflowX : "hidden"});
+        EventSlideWrap.css({transition: "none"})
+        EventSlideWrap.css({transform : "translateX(" + -(EventSlideWrap.width())*1 + "px)"});
+
+        // first child 변경
+        HotissueFlex.find(".HotissueWrap").eq(0).find(".HotissueList").html("<li class='HotissueItem'> <a class='HotissueItem-link' href='#' onclick='return false'> <div class='HotissueItem-imgcontainer'><img class='HotissueItem-img' src='./img/8809189925287.jpg' alt='HEYROO베이컨칩에그인헬'><span class='NewItemImg'></span></div><div class='HotissueItem-title'><p>HEYROO베이컨칩에그인헬</p></div><div class='HotissueItem-price'><strong>1,800</strong><span>원</span></div></a></li>")
+        HotissueFlex.find(".HotissueWrap").eq(0).find(".HotissueList").append("<li class='HotissueItem'><a class='HotissueItem-link' href='#' onclick='return false'><div class='HotissueItem-imgcontainer'><img class='HotissueItem-img' src='./img/8809895798304.jpg' alt='망곰바질토마토베이글'><span class='NewItemImg'></span></div><div class='HotissueItem-title'><p>샌)망곰바질토마토베이글</p></div><div class='HotissueItem-price'><strong>4,900</strong><span>원</span></div></a></li>")
+    
+        // second child 변경
+        HotissueFlex.find(".HotissueWrap").eq(1).find(".HotissueList").html("<li class='HotissueItem'><a class='HotissueItem-link' href='#' onclick='return false'><div class='HotissueItem-imgcontainer'><img class='HotissueItem-img' src='./img/8809383959293.jpg' alt='햄말이소불고기김밥'><span class='NewItemImg'></span></div><div class='HotissueItem-title'><p>김)햄말이소불고기김밥</p></div><div class='HotissueItem-price'><strong>2,200</strong><span>원</span></div></a></li>")
+        HotissueFlex.find(".HotissueWrap").eq(1).find(".HotissueList").append("<li class='HotissueItem'><a class='HotissueItem-link'  href='#' onclick='return false'><div class='HotissueItem-imgcontainer'><img class='HotissueItem-img' src='./img/8809895798564.png' alt='망곰이의딸기샌드'><span class='NewItemImg'></span></div><div class='HotissueItem-title'><p>샌)망곰이의딸기샌드</p></div><div class='HotissueItem-price'><strong>3,600</strong><span>원</span></div></a></li>")
+    
+        // 나머지 child 생성
+        HotissueFlex.append("<div class='HotissueWrap'><ul class='HotissueList'><li class='HotissueItem'><a class='HotissueItem-link' href='#' onclick='return false'><div class='HotissueItem-imgcontainer'><img class='HotissueItem-img' src='./img/8809824431692.jpg' alt='마라누들떡볶이'><span class='NewItemImg'></span></div><div class='HotissueItem-title'><p>편키트랩)마라누들떡볶이</p></div><div class='HotissueItem-price'><strong>8,900</strong><span>원</span></div></a></li><li class='HotissueItem'><a class='HotissueItem-link' href='#' onclick='return false'><div class='HotissueItem-imgcontainer'><img class='HotissueItem-img' src='./img/8801771029700.jpg' alt='멸추랑꼬마김밥'><span class='NewItemImg'></span></div><div class='HotissueItem-title'><p>김)멸추랑꼬마김밥</p></div><div class='HotissueItem-price'><strong>4,500</strong><span>원</span></div></a></li></ul></div>")
+        HotissueFlex.append("<div class='HotissueWrap'><ul class='HotissueList'><li class='HotissueItem'><a class='HotissueItem-link' href='#' onclick='return false'><div class='HotissueItem-imgcontainer'><img class='HotissueItem-img' src='./img/8809692955191.jpg' alt='망곰이딸기마카롱'><span class='NewItemImg'></span></div><div class='HotissueItem-title'><p>조이)망곰이딸기마카롱</p></div><div class='HotissueItem-price'><strong>3,800</strong><span>원</span></div></a></li><li class='HotissueItem'><a class='HotissueItem-link' href='#' onclick='return false'><div class='HotissueItem-imgcontainer'><img class='HotissueItem-img' src='./img/2202000064558.jpg' alt='단팥붕어빵N'><span class='NewItemImg'></span></div><div class='HotissueItem-title'><p>튀김)단팥붕어빵N</p></div><div class='HotissueItem-price'><strong>900</strong><span>원</span></div></a></li></ul></div>")
+        HotissueFlex.append("<div class='HotissueWrap'><ul class='HotissueList'><li class='HotissueItem'><a class='HotissueItem-link'  href='#' onclick='return false'><div class='HotissueItem-imgcontainer'><img class='HotissueItem-img' src='./img/8801771029601.jpg' alt='코난나폴리탄파스타'><span class='NewItemImg'></span></div><div class='HotissueItem-title'><p>면)코난나폴리탄파스타</p></di<div class='HotissueItem-price'><strong>4,900</strong><span>원</span></div></a></li><li class='HotissueItem'> <a class='HotissueItem-link' href='#' onclick='return false'><div class='HotissueItem-imgcontainer'><img class='HotissueItem-img' src='./img/8809948342683.jpg' alt='백종원뉴백반한판'><span class='NewItemImg'></span></div><div class='HotissueItem-title'><p>도)백종원뉴백반한판</p></div><div class='HotissueItem-price'><strong>4,700</strong><span>원</span></div></a></li></ul></div>")
+    
+        const HotissueIndicator = $(".HotissueIndicator");
+        let HotissueIndicator_html = "";
+
+        HotissueFlex.find(".HotissueWrap").each(function(i){
+        HotissueIndicator_html += "<span class=index" + i + "></span>";
+        HotissueIndicator.html(HotissueIndicator_html);
+        })
+
+        //Hotissue indicator color==========================
+        HotissueIndicator.find("span").eq(0).addClass("focus");
+
+        //Hotissue loop slide =================================
+        let hotslide_index = 0;
+        const Hotissue_loop = () => {
+            if(hotslide_index === 0){
+                HotissueFlex.css({transform : "translateX(" + -(HotissueFlex.width())*hotslide_index + "px)" , transition : "all 0.3s"})
+                HotissueIndicator.find("span").removeClass("focus");
+                HotissueIndicator.find("span").eq(hotslide_index).addClass("focus")
+                Hotissue_slide_index = 0;
+                hotslide_index++;
+            }else if(hotslide_index === 1){
+                HotissueFlex.css({transform : "translateX(" + -(HotissueFlex.width())*hotslide_index + "px)" , transition : "all 0.3s"})
+                HotissueIndicator.find("span").removeClass("focus");
+                HotissueIndicator.find("span").eq(hotslide_index).addClass("focus")
+                Hotissue_slide_index = 1;
+                hotslide_index++;
+            }
+            else if(hotslide_index === 2){
+                HotissueFlex.css({transform : "translateX(" + -(HotissueFlex.width())*hotslide_index + "px)" , transition : "all 0.3s"})
+                HotissueIndicator.find("span").removeClass("focus");
+                HotissueIndicator.find("span").eq(hotslide_index).addClass("focus")
+                Hotissue_slide_index = 2;
+                hotslide_index++;
+            }
+            else if(hotslide_index === 3){
+                HotissueFlex.css({transform : "translateX(" + -(HotissueFlex.width())*hotslide_index + "px)" , transition : "all 0.3s"})
+                HotissueIndicator.find("span").removeClass("focus");
+                HotissueIndicator.find("span").eq(hotslide_index).addClass("focus")
+                Hotissue_slide_index = 3;
+                hotslide_index++;
+            }
+            else if(hotslide_index === 4){
+                HotissueFlex.css({transform : "translateX(" + -(HotissueFlex.width())*hotslide_index + "px)" , transition : "all 0.3s"})
+                HotissueIndicator.find("span").removeClass("focus");
+                HotissueIndicator.find("span").eq(hotslide_index).addClass("focus")
+                Hotissue_slide_index = 4;
+                hotslide_index = 0;
+            }
+        }
+
+        let hotslide_loop = setInterval(Hotissue_loop, 3000);
+        
+        //Hotissue indicator click ================================
+        HotissueIndicator.find("span").click(function(){
+            clearInterval(hotslide_loop);
+            if($(this).hasClass("index0")){
+                HotissueFlex.css({transform : "translateX(" + -(HotissueFlex.width())*0 + "px)" , transition : "all 0.3s"})
+                HotissueIndicator.find("span").removeClass("focus");
+                $(this).addClass("focus")
+                Hotissue_slide_index = 0;
+            }
+            else if($(this).hasClass("index1")){
+                HotissueFlex.css({transform : "translateX(" + -(HotissueFlex.width())*1 + "px)" , transition : "all 0.3s"})
+                HotissueIndicator.find("span").removeClass("focus");
+                $(this).addClass("focus");
+                Hotissue_slide_index = 1;
+            }
+            else if($(this).hasClass("index2")){
+                HotissueFlex.css({transform : "translateX(" + -(HotissueFlex.width())*2 + "px)" , transition : "all 0.3s"})
+                HotissueIndicator.find("span").removeClass("focus");
+                $(this).addClass("focus");
+                Hotissue_slide_index = 2;
+            }
+            else if($(this).hasClass("index3")){
+                HotissueFlex.css({transform : "translateX(" + -(HotissueFlex.width())*3 + "px)" , transition : "all 0.3s"})
+                HotissueIndicator.find("span").removeClass("focus");
+                $(this).addClass("focus");
+                Hotissue_slide_index = 3;
+            }
+            else if($(this).hasClass("index4")){
+                HotissueFlex.css({transform : "translateX(" + -(HotissueFlex.width())*4 + "px)" , transition : "all 0.3s"})
+                HotissueIndicator.find("span").removeClass("focus");
+                $(this).addClass("focus");
+                Hotissue_slide_index = 4;
+            }
+        })
+
+        // 망곰이 이미지 변경
+        const StorycuItem_link = $(".StorycuItem-link");
+
+        StorycuItem_link.eq(2).html("<img src='./img/FB17C67A0EB542529236B4485F359D22.png' alt='Instagram'></img>")
+
+    }
 })

@@ -58,6 +58,9 @@ header{
     background-color: #26d034;
 }
 
+.NavigationItem-item{
+}
+
 .NavigationItem-item a{
     display: inline-block;
     font-size: 1.1rem;
@@ -158,6 +161,10 @@ header{
     justify-content: space-between;
     width: 65%;
     margin: auto;
+}
+
+.CUStoryTitleImg img{
+    position: relative;
     z-index: -1;
 }
 
@@ -419,6 +426,7 @@ header{
     transform: translateY(-50%);
     width: 100%;
     height: 100%;
+    z-index: -1;
 }
 
 .HotissueLeft{
@@ -814,7 +822,7 @@ header{
     right: 0%;
     width: 100%;
     height: 100%;
-    background: url(../img/info_bnr01.png) no-repeat bottom;
+    background: url(../img/info_bnr01.png) no-repeat right bottom;
     content: "";
     z-index: 0;
 }
@@ -824,7 +832,7 @@ header{
     right: 0%;
     width: 100%;
     height: 100%;
-    background: url(../img/info_bnr02.png) no-repeat bottom;
+    background: url(../img/info_bnr02.png) no-repeat right bottom;
     content: "";
     z-index: 0;
 }
@@ -1132,3 +1140,963 @@ Footer{
     width: 25%;
 }
 
+@media screen and (min-width : 1700px) and (max-width : 1820px){
+    html{
+        font-size: 15px;
+    }
+
+    .Hotissue{
+        width: 80%;
+    }
+
+    .HotissueItem{
+        margin: 0rem 0.5rem;
+    }
+
+    .Pocketcu{
+        width: 80%;
+    }
+
+    .StorycuWrap{
+        width: 60%;
+    }
+
+    .FooterWrap{
+        width: 70%;
+    }
+
+}
+@media screen and (min-width : 1520px) and (max-width : 1700px){
+    html{
+        font-size: 15px;
+    }
+
+    .CUStoryWrap{
+        width: 85%;
+    }
+
+    .Hotissue{
+        width: 90%;
+    }
+
+    .HotissueItem{
+        margin: 0rem 0.5rem;
+    }
+
+    .Pocketcu{
+        width: 90%;
+    }
+
+    .NowneedWrap{
+        width: 70%;
+    }
+
+    .MainInfoWrap{
+        width: 70%;
+    }
+
+    .SearchcuWrap{
+        width: 70%;
+    }
+
+    .StorycuWrap{
+        width: 68%;
+    }
+    .Searchcu-innerimg img{
+        width: 100%;
+    }
+
+    .FooterMenuList{
+        padding-right: 4rem;
+    }
+
+    .FooterWrap{
+        width: 75%;
+    }
+}
+
+@media screen and (min-width : 1280px) and (max-width : 1520px){
+    html{
+        font-size: 15px;
+    }
+
+    .CUStoryWrap{
+        width: 95%;
+    }
+
+    .Hotissue{
+        width: 90%;
+    }
+
+    .HotissueItem{
+        margin: 0rem 0.5rem;
+    }
+
+    .HotissueItem-img{
+        width: 160px;
+        height: 160px;
+    }
+
+    .HotissueItem-title{
+        width: 160px;
+    }
+
+    .Pocketcu{
+        width: 90%;
+    }
+
+    .NowneedWrap{
+        width: 90%;
+    }
+
+    .MainInfoWrap{
+        width: 90%;
+    }
+
+    .SearchcuWrap{
+        width: 90%;
+    }
+
+    .StorycuWrap{
+        width: 80%;
+    }
+
+    .Searchcu-innerimg img{
+        width: 100%;
+    }
+
+    .FooterMenuList{
+        padding-right: 4rem;
+    }
+
+    .FooterWrap{
+        width: 90%;
+    }
+}
+
+@media screen and (min-width : 980px) and (max-width : 1280px){
+    html{
+        font-size: 13px;
+    }
+
+    .LogoImg{
+        width: 90%;
+    }
+
+    .HeaderLang{
+        right: 6%;
+    }
+
+    .NavigationItem{
+        padding:0rem 1.2rem;
+    }
+    
+
+    .CUStoryWrap{
+        width: 95%;
+    }
+
+    .CUStoryTitleImg img{
+        width: 100%;
+    }
+
+    .CUStoryThumbImg img{
+        width: 100%;
+    }
+
+    .CUStoryLink a{
+        font-size: 1.2rem;
+    }
+
+    .EventSlide{
+        margin-top: 100px;
+    }
+
+    .Hotissue{
+        width: 100%;
+    }
+
+    .HotissueSlide{
+        width: 100%;
+    }
+    
+    .HotissueItem-img{
+        width: 160px;
+        height: 160px;
+    }
+
+    .HotissueItem-title{
+        width: 160px;
+    }
+
+    .HotissueSlideBtn{
+        display: none;
+    }
+
+    .Pocketcu{
+        width: 95%;
+    }
+
+    .PocketWrap{
+        padding:7rem 2rem 7rem 2rem
+    }
+    
+    .PocketImg-container{
+        right: 22%;
+    }
+
+    .PlusContentTitle{
+        width: 90%;
+    }
+
+    .PlustContentItem-img{
+        width: 160px;
+        height: 160px;
+    }
+
+    .NowneedWrap{
+        width: 95%;
+    }
+
+    .NowneedWrap-innerLink a{
+        padding:10px 25px;
+    }
+    
+    .Item102{
+        top:25%;
+    }
+
+    .Item107{
+        right: 0%;
+    }
+
+    .MainInfoWrap{
+        width: 95%;
+    }
+
+    .MainInfoWrapItem{
+        padding:50px 40px;
+    }
+
+    .MainInfoWrapItem:first-child::after{
+        background: url(../img/info_bnr01.png) no-repeat right bottom / cover;
+        background-size: 100%;
+    }
+
+    .MainInfoWrapItem:last-child::after{
+        background: url(../img/info_bnr02.png) no-repeat right bottom / cover;
+        background-size: 100%;
+    }
+
+    .SearchcuWrap{
+        width: 95%;
+    }
+
+    .Searchcu-innerimg img{
+        width: 100%;
+    }
+
+    .StorycuWrap{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: auto;
+    }
+    
+    .StorycuWrapTitle{
+        font-size: 5rem;
+        padding:0rem 0rem 5rem 0rem;
+    }
+
+    .StorycuItem{
+        float: none;
+        margin-bottom: 5rem;
+    }
+
+    .StorycuItem:nth-child(4){
+        padding-top: 0px;
+    }
+
+    .StorycuItem-link{
+        display: flex;
+        justify-content: center;
+    }
+
+    .StorycuItem-link img{
+        width: 80%;
+    }
+
+    .StorycuItem-title{
+        justify-content: center;
+    }
+
+    .StorycuItem-sub{
+        text-align: center;
+    }
+
+    .FooterWrap{
+        width: 95%;
+    }
+
+    .FooterMenuList{
+        padding-right: 3rem;
+    }
+
+}
+
+@media screen and (min-width : 785px) and (max-width : 980px){
+    html{
+        font-size: 12px;
+    }
+
+    .LogoImg{
+        width: 80%;
+    }
+
+    .HeaderLang{
+        right: 6%;
+    }
+
+    .NavigationItem{
+        padding:0rem 0.5rem;
+    }
+
+    .CUStoryWrap{
+        width: 95%;
+    }
+
+    .CUStoryTitleImg img{
+        width: 100%;
+    }
+
+    .CUStoryThumbImg img{
+        width: 100%;
+    }
+
+    .CUStoryLink a{
+        font-size: 1.2rem;
+    }
+
+    .EventSlide{
+        margin-top: 100px;
+    }
+
+    .Hotissue{
+        width: 100%;
+    }
+
+    .HotissueSlide{
+        width: 100%;
+    }
+
+    .HotissueItem-img{
+        width: 120px;
+        height: 120px;
+    }
+
+    .HotissueItem-title{
+        width: 120px;
+    }
+
+    .NewItemImg{
+        width: 35px;
+        height: 35px;
+    }
+
+    .HotissueSlideBtn{
+        display: none;
+    }
+
+    .Pocketcu{
+        width: 100%;
+        height: 180px;
+        background-color: #e9e7f6;
+    }
+
+    .PocketWrap{
+        position: absolute;
+        top: 50%;
+        left:30%;
+        transform: translateY(-50%);
+        flex-direction: column;
+        padding:0rem;
+    }
+
+    .PocketTitle{
+        margin-bottom: 3rem;
+    }
+    
+    .PocketImg-container{
+        position: absolute;
+        bottom:0%;
+        right:20%;
+        width: 170px;
+        height: 157px;
+    }
+
+    .PocketImg-container img{
+        width: 100%;
+    }
+
+    .PocketTitle strong{
+        display: inline-block;
+        width: 150px;
+        font-size: 1.5rem;
+    }
+
+    .PocketTitle p{
+        display: none;
+    }
+
+    .PlusContentTitle{
+        width: 90%;
+    }
+
+    .PlustContentItem-img{
+        width: 120px;
+        height: 120px;
+    }
+
+    .PlustContentItem-title p{
+        height: 25px;
+    }
+
+    .NowneedWrap{
+        width: 95%;
+    }
+
+    .NowneedWrap-innerLink a{
+        padding:10px 25px;
+    }
+
+    .MainInfoWrap{
+        width: 95%;
+    }
+
+    .MainInfoWrapItem{
+        padding:50px 40px;
+    }
+
+    .MainInfoWrapItem:first-child::after{
+        background: url(../img/info_bnr01.png) no-repeat right bottom / cover;
+        background-size: 100%;
+    }
+
+    .MainInfoWrapItem:last-child::after{
+        background: url(../img/info_bnr02.png) no-repeat right bottom / cover;
+        background-size: 100%;
+    }
+
+    .SearchcuWrap{
+        width: 95%;
+    }
+
+    .Searchcu-innerimg img{
+        width: 100%;
+    }
+
+    .innertext-title{
+        font-size: 2.5rem;
+    }
+
+    .innertext-title .icon{
+        width: 55px;
+        height: 48px;
+        background: url(../img/ico_cu.png) no-repeat center bottom/ cover;
+        background-size: 100%;
+    }
+
+    .SearchcuWrap{
+        width: 95%;
+    }
+
+    .Searchcu-innerimg img{
+        width: 100%;
+    }
+
+    .StorycuWrap{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: auto;
+    }
+    
+    .StorycuWrapTitle{
+        font-size: 5rem;
+        padding:0rem 0rem 5rem 0rem;
+    }
+
+    .StorycuItem{
+        float: none;
+        margin-bottom: 5rem;
+    }
+
+    .StorycuItem:nth-child(4){
+        padding-top: 0px;
+    }
+
+    .StorycuItem-link{
+        display: flex;
+        justify-content: center;
+    }
+
+    .StorycuItem-link img{
+        width: 80%;
+    }
+
+    .StorycuItem-title{
+        justify-content: center;
+    }
+
+    .StorycuItem-sub{
+        text-align: center;
+    }
+
+    .FooterWrap{
+        width: 95%;
+    }
+
+    .FooterMenuList{
+        padding-right: 2rem;
+    }
+}
+
+@media screen and (max-width : 785px){
+    html{
+        font-size: 12px;
+    }
+
+    .HeaderWrap{
+        min-height: 5rem;
+    }
+
+    .Logo img{
+        width: 80%;
+    }
+
+    .Navigation{
+        display: none;
+        top:auto;
+        bottom:15%;
+        left:0%;
+        transform: none;
+    }
+
+    .NavigationItem{
+        font-size: 0.9rem;
+        padding:0rem 1.5rem 0rem 0rem;
+    }
+
+    .NavigationItem:nth-child(6){
+        display: none;
+    }
+
+
+    .TogglemenuLink{
+        width: 20px;
+        height: 20px;
+    }
+
+    .HeaderTopUtil{
+        display: none;
+    }
+
+    .CUStoryWrap{
+        width: 95%;
+    }
+
+    .CUStoryTitleImg img{
+        width: 80%;
+    }
+
+    .CUStoryThumbImg img{
+        width: 100%
+    }
+
+    .CUStoryLink a{
+        font-size: 1.2rem;
+    }
+
+    .EventSlide{
+        margin-bottom: 100px;
+    }
+
+    .EventSlidBtn{
+        display: none;
+    }
+
+    .Hotissue{
+        width: 95%;
+        margin-bottom: 100px;
+    }
+
+    .HotissueTitle{
+        width: 100%;
+        text-align: left;
+        font-size: 1.5rem;
+    }
+
+    .HotissueSlide{
+        width: 100%;
+    }
+
+    .HotissueWrap{
+        padding:0px;
+    }
+
+    .HotissueItem{
+        width: 50%;
+        margin: 0rem 1rem;
+    }
+
+    .HotissueItem-imgcontainer{
+        display: flex;
+        justify-content: center;
+    }
+
+    .HotissueItem-img{
+        width: 100%;
+        height: 100%;
+    }
+
+    .NewItemImg{
+        right: 0%;
+        width: 30px;
+        height: 30px;
+    }
+
+    .HotissueSlideBtn{
+        display: none;
+    }
+
+    .Pocketcu{
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        height: 180px;
+        margin-bottom: 100px;
+        background-color: #e9e7f6;
+    }
+
+    .PocketWrap{
+        padding: 0px;
+        flex-direction: column;
+        justify-content:center;
+        align-items: center;
+    }
+
+    .PocketImg-container{
+        width: 50%;
+    }
+
+    .PocketTitle{
+        width: 150px;
+        text-align: center;
+    }
+
+    .PocketTitle strong{
+        font-size: 1.5rem;
+    }
+
+    .PocketTitle p{
+        display: none;
+    }
+
+    .PocketLink{
+        margin-top: 2rem;
+    }
+
+    .PocketImg-container{
+        display: none;
+    }
+
+    .PlusContent{
+        margin-bottom: 100px;
+    }
+
+    .PlusContentTitle{
+        width: 95%;
+        text-align: left;
+        font-size: 1.5rem;
+    }
+
+    .PlustContentWrap{
+        width: 100%;
+        flex-shrink: 0;
+    }
+
+    .PlustContentList{
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+
+    .PlustContentItem{
+        width: 46%;
+        margin-bottom: 1.2rem;
+    }
+    
+    .PlustContentItem-link{
+        display: flex;
+        flex-direction: column;
+      align-items: center;
+    }
+
+    .PlustContentItem-img{
+        width: 150px;
+        height: 150px;
+    }
+
+    .NowneedWrap{
+        width: 95%;
+        flex-direction: column;
+    }
+
+    .NowneedWrap-innertext{
+        width: 100%;
+        text-align: center;
+    }
+
+    .innertext-title{
+        font-size: 2rem;
+        line-height: 2rem;
+    }
+
+    .innertext-sub{
+        font-size: 1.2rem;
+        font-weight: 500;
+        color: #313842;
+    }
+
+    .innertext-link{
+        display: none;
+    }
+
+    .Nowneed{
+        margin-bottom: 100px;
+    }
+
+    .NowneedWrap-innerLink{
+        width: 100%;
+        height: 240px;
+        margin-top: 3rem;
+    }
+
+    .NowneedWrap-innerLink a{
+        justify-content: center;
+        font-size: 1.5rem;
+        padding:10px;
+    }
+
+    .NowneedWrap-innerLink a img{
+        width: 30%;
+    }
+
+    .Item101{
+        top:0%;
+        left:10%;
+    }
+
+    .Item102{
+        top:28%;
+        left:25%;
+    }
+
+    .Item103{
+        right: 10%;
+    }
+
+    .Item104{
+        top:60%;
+        left:5%;
+    }
+
+    .Item105{
+        top:55%;
+    }
+
+    .Item106{
+        bottom:0%;
+    }
+
+    .Item107{
+        bottom:0%;
+        right: 5%;
+    }
+
+    .MainInfoWrap{
+        flex-direction: column;
+    }
+
+    .MainInfoWrap{
+        width: 95%;
+    }
+
+    .MainInfoWrapItem{
+        width: 100%;
+    }
+
+    .MainInfoWrapItem{
+        margin-bottom: 1.5rem;
+        padding:25px 15px;
+    }
+
+    .MainInfoWrapItem-link h2{
+        font-size: 1.8rem;
+    }
+
+    .MainInfoWrapItem-link p{
+        width: 150px;
+        margin-bottom: 0px;
+        font-size: 1.1rem;
+    }
+
+    .MainInfoarrow{
+        display: none;
+    }
+
+    .MainInfoWrapItem:first-child::after{
+        width: 85%;
+        height: 85%;
+        background: url(../img/info_bnr01.png) no-repeat right bottom / cover;
+        background-size: 85%;
+    }
+
+    .MainInfoWrapItem:last-child::after{
+        width: 85%;
+        height: 85%;
+        background: url(../img/info_bnr02.png) no-repeat right bottom / cover;
+        background-size: 85%;
+    }
+
+    .Searchcu{
+        margin-top: 100px;
+        margin-bottom: 100px;
+    }
+
+    .SearchcuWrap{
+        width: 95%;
+        flex-direction: column;
+    }
+
+    .Searchcu-innertitle{
+        width: 100%;
+        text-align: center;
+    }
+
+    .innertext-link{
+        display: block;
+        margin-top: 2.5rem;
+        border-bottom: 3px solid black;
+    }
+
+    .Searchcu-innerimg{
+        width: 350px;
+        margin-top: 5rem;
+    }
+
+    .Searchcu-innerimg img{
+        width: 100%;
+    }
+
+    .innertext-title .icon{
+        width: 65px;
+        background: url(../img/ico_cu.png) no-repeat center bottom/ cover;
+        background-size: 100%;
+    }
+
+    .innertext-link a{
+        height: 100%;
+    }
+
+    .MainInfoWrapItem:first-child::after{
+        width: 100%;
+        height: 100%;
+        background: url(../img/info_bnr01.png) no-repeat right bottom;
+        background-size: 80%;
+    }
+
+    .MainInfoWrapItem:last-child::after{
+        width: 100%;
+        height: 100%;
+        background: url(../img/info_bnr02.png) no-repeat right bottom;
+        background-size: 80%;
+    }
+
+    .StorycuWrap{
+        width: 95%;
+        height: auto;
+        text-align: center;
+    }
+
+    .StorycuWrapTitle{
+        padding:0px;
+        font-size: 1.7rem;
+    }
+
+    .StorycuItem:nth-child(4){
+        padding:0px;
+        float: none;
+    }
+    .StorycuItem-link {
+        display: inline-block;
+        width: 80%;
+        margin-top: 2rem;
+        border-radius: 1rem;
+    }
+
+    .StorycuItem-link img{
+        width: 100%;
+    }
+
+    .StorycuItem:nth-child(-n+3){
+        display: none;
+    }
+
+    .StorycuItem-title{
+        display: none;
+    }
+
+    .StorycuItem-sub{
+        margin-top: 1rem;
+        font-weight: 500;
+    }
+
+    .Custory{
+        margin-top: 100px;
+    }
+
+    .CustoryWrap-title{
+        top:20%;
+        transform: none;
+        width: 250px;
+        font-size: 1.7rem;
+        line-height: 3rem;
+    }
+
+    .FooterWrap{
+        width: 95%;
+        flex-wrap: wrap;
+    }
+
+    .FooterInfo{
+        width: 100%;
+        margin-bottom: 3rem;
+    }
+
+    .FooterMenu{
+        width: 50%;
+    }
+
+    .FooterMenuList{
+        padding-right: 2.5rem;
+    }
+
+    .FooterSite{
+        width: 50%;
+    }
+}
