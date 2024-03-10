@@ -1,5 +1,5 @@
 $(function(){
-    $("body").css({overflowX : "hidden"});
+    $("html").css({overflowX : "hidden"});
 
     // Header menu fixed =======================================
     const HeaderWrap = $(".HeaderWrap");
@@ -576,7 +576,7 @@ $(function(){
 
     // 모바일버전 hotissue html 변경
     if(window.innerWidth <= 785){
-        $("body").css({overflowX : "hidden"});
+        $("html").css({overflowX : "hidden"});
         EventSlideWrap.css({transition: "none"})
         EventSlideWrap.css({transform : "translateX(" + -(EventSlideWrap.width())*1 + "px)"});
 
