@@ -1,6 +1,4 @@
 $(function(){
-    $("html").css({overflowX : "hidden"});
-
     // Header menu fixed =======================================
     const HeaderWrap = $(".HeaderWrap");
     $(window).scroll(function(){
@@ -575,7 +573,7 @@ $(function(){
     const custory_slide_interval =  setInterval(custory_slide, 5000);
 
     // 모바일버전 hotissue html 변경
-    if(window.innerWidth <= 785){
+    if($(window).width() <= 785){
         $("html").css({overflowX : "hidden"});
         EventSlideWrap.css({transition: "none"})
         EventSlideWrap.css({transform : "translateX(" + -(EventSlideWrap.width())*1 + "px)"});
