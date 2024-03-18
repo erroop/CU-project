@@ -641,8 +641,8 @@ $(function(){
             }
         }
 
-        let hotslide_loop = setInterval(Hotissue_loop, 3000);
-        
+        const hotslide_loop = setInterval(Hotissue_loop, 3000);
+
         //Hotissue indicator click ================================
         HotissueIndicator.find("span").click(function(){
             clearInterval(hotslide_loop);
